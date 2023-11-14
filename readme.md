@@ -1,4 +1,4 @@
-# IT WIKI | WIK-IT | WIKI IT
+# WIKI DEV
 
 Plateforme pour partager des connaissances autour de l'IT. On y contribue en rédigeant des documentations sur differents sujets et les garder sur nos postes. 
 
