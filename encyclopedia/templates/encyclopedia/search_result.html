@@ -1,0 +1,20 @@
+{% extends 'encyclopedia/layout.html' %}
+{% block body %}
+
+    <h1>SEARCH QUERY "{{ query }}"</h1>
+
+    <form action="{% url 'search' %}" method="GET">
+        <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
+    </form>
+
+    <ul>
+        {% for entry in result %}
+            <li>
+                <a href="{% url 'wiki' entry %}">{{ entry }}</a>
+            </li>
+            {% empty %}
+            <p>{{ query }} not found</p>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

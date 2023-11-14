@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #E0F4FF;
+    --note-color: #e7f8e1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: #111;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+header {
+    grid-area: 1 / 1 / 2 / 10;
+    width: 100vw;
+    display: flex;
+}
+
+.logo {
+    width: 200px;
+    height: 75px;
+    margin: 0px 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-top {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+}
+
+.search-bar {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.search-bar input {
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+
+.search-bar img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.nav-menu > * {
+    margin-right: 40px;
+}
+
+
+.contributor {
+    width: 15%;
+}
+
+aside {
+    display: block;
+    grid-area: 2 / 1 / 2 / 2;
+    width: 350px;
+    padding-top: 50px;
+    overflow: scroll;
+}
+
+aside li {
+    padding: 20px 50px;
+    transition: all .3s ease-in;
+}
+aside li:hover {
+    background-color: #E0F4FF;
+    /* border-bottom: 0.5px solid #f1f1f1; */
+}
+
+aside a {
+    color: #87C4FF;
+}
+
+main {
+    grid-area: 2/ 2 / 4 / 8;
+    overflow: scroll;
+    width: 102%;
+    padding: 20px 0px;
+}
+
+.welcome-message {
+    width: 500px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #626262;
+}
+
+.welcome-message p {
+    font-size: 1rem;
+    line-height: 25px;
+    margin-top: 15px;
+    text-align: left;
+}
+.content {
+    margin: auto;
+}
+.content h1, h2 {
+    margin: 10px 0px;
+}
+
+.content code {
+    color :#860A35;
+}
+
+.content a {
+    color :#87C4FF;
+}
+
+

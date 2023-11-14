@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '404-page/styles.css' %}">
+    <title>404 PAGE  NOT FOUND</title>
+  </head>
+  <body>
+    <h1 class="top-title title">404 not found</h1>
+    <main>
+      <section class="wrapper">
+        <div class="illustration">
+          <img src="{% static '404-page/images/Scarecrow.png' %}" alt="Scarecrow Image">
+        </div>
+        <div class="description">
+          <div class="desc-wrapper">
+            <h1 class="desc-title">I have bad news for you</h1>
+            <p class="desc-paragraph">The page you are looking for might be removed or is temporarily unavailable</p>
+            <a href="{% url 'index' %}" class="btn btn-link">back to homepage</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'encyclopedia/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="{% static 'encyclopedia/images/logo_2.png' %}" alt="wiki logo">
+            </div>
+            <nav>
+                <div class="nav-top">
+                    <div class="search-bar">
+                        <form action="{% url 'search' %}" method="GET">
+                            <img src="{% static 'encyclopedia/images/search-symbol.png' %}" alt="">
+                            <input class="search" type="text" name="q" placeholder="recherche...">
+                        </form>
+                    </div>
+                    <div class="contributor">
+                        <span>Mamour DIOP</span>
+                    </div>
+                </div>
+    
+                <div class="nav-menu">
+                    <li>
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'new-page' %}">Contribuer</a>
+                    </li>
+                </div>
+                
+            </nav>
+        </header>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

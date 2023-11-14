@@ -1,0 +1,31 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <aside>
+        <h2 style="text-align: center; padding-top: 50px;">Sommaire</h2>
+
+        <ul>
+            {% for entry in entries %}
+                <li>
+                    <a href="{% url 'wiki' entry %}">{{ entry }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </aside>
+    <main style="overflow: hidden;">
+
+        <div class="welcome-message">
+            <h1>Hello World,</h1>
+            <p>
+                Wiki-Dev est un endroit pour partager nos connaissances ensemble.
+                Nous sommes plusieurs professionnels de l’IT, étudiants ou passionnés à rédiger des notes ou des documentations sur différents sujets et les garder sur nos postes. Alors, pourquoi ne pas les partager entre nous ? Cela nous permettrait de monter en compétences, de découvrir des solutions et de nous instruire mutuellement.
+            </p>
+            
+        </div>
+    </main>
+
+{% endblock %}
